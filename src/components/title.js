@@ -1,5 +1,5 @@
 
-export const Title = (title) => {
+export const Title = ({ title }) => {
     return (
         <span>
             {title}

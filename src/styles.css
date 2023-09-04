@@ -5,50 +5,51 @@ body {
   background: #f6f6f6;
 }
 .header-style {
-  position: relative;
-  text-align: center;
-  color: #121212;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   height: 50px;
-  line-height: 10px;
+  line-height: 50px;
   background-color: #fff;
 }
-.header-style .index {
+.header-style .header {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.header-style .header .index {
   position: absolute;
   left: 20px;
-  top: 19px;
   color: #056de8;
   width: 80px;
-  height: 30px;
+  height: 100%;
   font-size: 30px;
 }
-.header-style .menu {
+.header-style .header .menu {
   position: absolute;
-  top: 20px;
+  top: 0;
   left: 110px;
-  height: 30px;
+  height: 100%;
   font-size: 15px;
 }
-.header-style .search {
+.header-style .header .search {
   position: absolute;
   left: 500px;
-  top: 7px;
-  height: 36px;
+  top: -7px;
   width: 450px;
-  border-radius: 20px;
+}
+.header-style .header .search input {
+  height: 100%;
+  width: 450px;
   background-color: #f6f6f6;
 }
-.header-style .search input {
-  height: 36px;
-  width: 450px;
-  border-radius: 20px;
-  background-color: #f6f6f6;
-}
-.header-style .search button {
+.header-style .header .search button {
   height: 36px;
   border-radius: 40px;
   background-color: #f6f6f6;
 }
-.header-style .ctx {
+.header-style .header .ctx {
   position: absolute;
   top: 10px;
   left: 1000px;
@@ -57,7 +58,7 @@ body {
   text-align: center;
   padding: 0;
 }
-.header-style .ctxx {
+.header-style .header .ctxx {
   position: absolute;
   top: 10px;
   left: 1050px;
@@ -66,14 +67,14 @@ body {
   text-align: center;
   padding: 0;
 }
-.header-style .xinxi {
+.header-style .header .xinxi {
   width: 360px;
   height: 430px;
   max-height: 430px;
   font-size: 18px;
   overflow: auto;
 }
-.header-style .users {
+.header-style .header .users {
   position: absolute;
   top: 10px;
   left: 1100px;
@@ -84,18 +85,104 @@ body {
 }
 .content-style {
   position: relative;
-  text-align: center;
-  min-height: 120px;
-  line-height: 120px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   color: #fff;
   margin-top: 10px;
+}
+.content-style .float {
+  position: absolute;
+  top: 100px;
+  width: 700px;
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid #f6f6f6;
+}
+.content-style .float a {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 26px;
+  line-height: 60px;
+}
+.content-style .float .active {
+  color: blue;
+}
+.content-style .float a:hover {
+  color: gray;
+}
+.content-style .float .fow {
+  width: 100%;
+  height: 170px;
+  background-color: white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 170px;
+  color: gray;
+}
+.content-style .float .index {
+  position: relative;
+  width: 100%;
+  min-height: 160px;
+  background-color: white;
+  font-size: 13px;
+  color: black;
+  padding: 20px;
+  border-top: 1px solid #f6f6f6;
+  border-bottom: 1px solid #f6f6f6;
+}
+.content-style .float .index h2 {
+  margin: 0;
+  margin-bottom: 9px;
+}
+.content-style .float .index p {
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0;
+}
+.content-style .float .index p button {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  height: auto;
+  line-height: inherit;
+  color: blue;
+}
+.content-style .float .index p button:hover {
+  color: gray;
+}
+.content-style .float .index p:hover {
+  color: gray;
+}
+.content-style .float .index .btn {
+  cursor: pointer;
+  width: 48px;
+  height: 28px !important;
+  line-height: 32px;
+  border: none;
+  border-radius: 3px;
+  height: auto;
+  line-height: inherit;
+  color: blue;
+  padding: 2px;
+  margin-left: 16px;
+}
+.content-style .float .index .review {
+  cursor: pointer;
+  width: 90px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  line-height: inherit;
+  color: gray;
 }
 .content-style .delete {
   float: right;
 }
 .content-style .index-img {
   position: absolute;
-  left: 130px;
   width: 700px;
   height: 80px;
   background: url(img/index.jpeg);
@@ -119,7 +206,6 @@ body {
   min-width: 300px !important;
   width: 300px !important;
   height: 300px;
-  padding: 10px;
 }
 .sider-style .create {
   position: absolute;
